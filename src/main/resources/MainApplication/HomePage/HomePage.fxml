@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="776.0" prefWidth="1177.0" stylesheets="@../../CSS/HomePage.CSS" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Dashboard.HomePageController">
+   <children>
+      <Label layoutX="29.0" layoutY="456.0" />
+      <TableView fx:id="productTable" layoutX="23.0" prefHeight="684.0" prefWidth="1157.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="41.0" text="ID" />
+            <TableColumn fx:id="categoryCol" minWidth="0.0" prefWidth="86.0" text="Category" />
+          <TableColumn fx:id="nameCol" minWidth="0.0" prefWidth="215.0" text="Name" />
+            <TableColumn fx:id="cpuCol" minWidth="16.0" prefWidth="146.0" text="CPU" />
+            <TableColumn fx:id="ramCol" minWidth="0.0" prefWidth="77.0" text="RAM" />
+            <TableColumn fx:id="storageCol" minWidth="16.0" prefWidth="81.0" text="STORAGE" />
+            <TableColumn fx:id="displayCol" minWidth="16.0" prefWidth="176.0" text="DISPLAY" />
+            <TableColumn fx:id="yearCol" minWidth="16.0" prefWidth="73.0" text="YEAR" />
+            <TableColumn fx:id="selledCol" minWidth="0.0" prefWidth="117.0" text="PRICE" />
+            <TableColumn fx:id="quantityCol" minWidth="0.0" prefWidth="70.333251953125" text="QUANTITY" />
+            <TableColumn fx:id="sellerCol" minWidth="2.0" prefWidth="96.0" text="SELLER" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="173.0" layoutY="698.0" prefHeight="71.0" prefWidth="890.0" styleClass="anchorpane_menu_2">
+         <children>
+            <TextField fx:id="searchtext" layoutX="340.0" layoutY="12.0" prefHeight="46.0" prefWidth="492.0" promptText="        Search..." styleClass="search">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <ImageView fx:id="iAdd1" fitHeight="38.0" fitWidth="27.0" layoutX="785.0" layoutY="22.0" onMouseClicked="#search" pickOnBounds="true" preserveRatio="true" styleClass="text-field">
+               <image>
+                  <Image url="@../../ico/search.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iAdd" fitHeight="46.0" fitWidth="46.0" layoutX="59.0" layoutY="12.0" onMouseClicked="#addnewproduct" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ico/add.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iRemoveView" fitHeight="46.0" fitWidth="46.0" layoutX="187.0" layoutY="12.0" onMouseClicked="#Remove" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ico/remove.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iAdd22" fitHeight="50.0" fitWidth="41.0" layoutX="131.0" layoutY="14.0" onMouseClicked="#switcheditproductscene" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ico/edi.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iAdd241" fitHeight="50.0" fitWidth="41.0" layoutX="259.0" layoutY="15.0" onMouseClicked="#addtocart" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ico/addcart.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

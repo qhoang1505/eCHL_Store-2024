@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="763.0" prefWidth="1364.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Dashboard.DashboardController">
+   <children>
+      <ImageView fitHeight="789.0" fitWidth="1364.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/bg.png" />
+         </image></ImageView>
+      <BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="788.0" prefWidth="1364.0" stylesheets="@../../CSS/HomePage.CSS">
+         <left>
+            <AnchorPane prefHeight="783.0" prefWidth="132.0" styleClass="anchorpane_menu" stylesheets="@../../CSS/HomePage.CSS" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="user" fitHeight="47.0" fitWidth="43.0" layoutX="41.0" layoutY="317.0" onMouseClicked="#switchprofile" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ico/profile.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="home" fitHeight="50.0" fitWidth="52.0" layoutX="38.0" layoutY="228.0" onMouseClicked="#switchhomescene" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ico/home.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="iCart" fitHeight="43.0" fitWidth="50.0" layoutX="41.0" layoutY="477.0" onMouseClicked="#yourcartscene" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ico/cart.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="Usernamelabel" layoutX="24.0" layoutY="76.0" styleClass="label_username" text="Username" textAlignment="CENTER" textFill="#176b87">
+                     <font>
+                        <Font name="#9Slide03 Arima Madurai Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="iCart1" fitHeight="43.0" fitWidth="50.0" layoutX="41.0" layoutY="399.0" onMouseClicked="#change_chat" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ico/chat.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="46.0" layoutY="41.0" text="HI!" textAlignment="CENTER" textFill="#176b87">
+                     <font>
+                        <Font name="#9Slide03 Arima Madurai Black" size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="label_name" />
+                        <String fx:value="label_username" />
+                     </styleClass>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

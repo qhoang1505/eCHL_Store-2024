@@ -1,0 +1,110 @@
+.anchopane {
+    -fx-background-color: rgba(255, 255, 255, 0.6);
+}
+
+.anchopane_main {
+    -fx-background-color: rgba(255, 255, 255, 0.6);
+}
+
+.anchopane_main_2 {
+    -fx-background-color: rgba(255, 255, 255, 0);
+}
+.transparent-scroll-pane {
+    -fx-opacity: 0.5;
+}
+
+.shadow {
+    -fx-effect: dropShadow(three-pass-box, rgba(0, 0, 0, 0), 10, 0, 0, 10);
+}
+.dock_header {
+    -fx-background-color: #DFDFDE;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 0 0 25 25;
+}
+
+.dock_footer {
+    -fx-background-color: #DFDFDE;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+}
+
+.anchorpane_search {
+    -fx-background-color: #f5f7f8;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+
+.anchopane2 {
+    -fx-background-color: #DDE6ED ;
+}
+
+.anchorpane_main_chat {
+    -fx-background-color: #f5f7f8;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+
+.text-field_textmessenges {
+    -fx-font-family: "#9Slide03 Cabin Bold";
+    -fx-font-size: 16px;
+    -fx-background-radius: 20;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-color:#f9f9f9 ;
+    -fx-border-radius: 20;
+    -fx-background-color:#f9f9f9;
+}
+
+.text-field_search {
+    -fx-font-family: "#9Slide03 Cabin Bold";
+    -fx-font-size: 16px;
+    -fx-background-radius: 20;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-color:  #DFDFDE;
+    -fx-border-radius: 20;
+    -fx-background-color: #DFDFDE;
+}
+
+.anchopane_profile {
+    -fx-background-color: #27374D;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+}
+
+.imageview_avatar {
+    -fx-border-radius: 50%; /* Set the border radius to half of the width/height to make it circular */
+    -fx-background-radius: 50%; /* Set the background radius as well for a circular background */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-color: black; /* Border color */
+    -fx-background-color: white; /* Background color (if needed) */
+}
+
+.scroll_pane_chat {
+    -fx-background-color: #fffff ;
+    -fx-border-color: #fffff;
+}
+.button {
+    -fx-background-color: #27374D;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-text-fill: #DDE6ED;
+    -fx-font-size: 16px;
+}
+
+.button:hover {
+    -fx-background-color: transparent;
+    -fx-border-color: #27374D;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-text-fill: #27374D;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/*Text*/
+.text1 {
+
+}
+
+.text2 {
+
+}

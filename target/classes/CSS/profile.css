@@ -1,0 +1,65 @@
+.anchopane_layout {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+}
+
+.label_name {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #27374D;
+    -fx-text-alignment: center;
+}
+
+.my-image-view {
+    -fx-background-radius: 500px;
+    -fx-border-radius: 500px;
+}
+
+.label_username_bold{
+    -fx-font-size: 19px;
+    -fx-text-fill: #27374D;
+    -fx-font-weight: bold;
+}
+
+.label_username {
+    -fx-font-size: 19px;
+    -fx-text-fill: #27374D;
+    -fx-alignment: LEFT;
+}
+
+.button{
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-background-color: #27374D;
+    -fx-text-fill:#DDE6ED ;
+    -fx-font: 19px;
+}
+
+.text-field {
+    -fx-font-family: "#9Slide03 AmpleSoft", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-font-size: 16px;
+    -fx-text-fill: #27374D; /* Default text color */
+    -fx-background-color: transparent; /* Transparent background */
+    -fx-padding: 0 0 5 0; /* Adjust padding to leave space for the underline */
+    -fx-border-width: 0 0 1 0; /* Add a bottom border for the underline */
+    -fx-border-color:#27374D;  /* Underline color */
+    -fx-prompt-text-fill: #61677A; /*Color of prompt text*/ /*NGUYEN NGOC LAN CHU Y NGHE =)))*/
+}
+
+.text-field:hover {
+    -fx-border-color: #27374D; /* Hover effect for the underline */
+    -fx-text-fill: #27374D; /* Text color on hover */
+}
+
+.text-field:focused {
+    -fx-border-color: #27374D; /* Focus effect for the underline */
+    -fx-text-fill: #27374D; /* Text color on focus */
+}
+
+.text-field:disabled {
+    -fx-text-fill: #27374D; /* Text color when disabled */
+    -fx-background-color: transparent; /* Transparent background when disabled */
+    -fx-border-color: transparent;
+    /* Transparent border when disabled */
+}

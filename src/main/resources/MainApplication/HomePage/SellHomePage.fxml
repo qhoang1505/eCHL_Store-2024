@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxWidth="-1.0" prefHeight="753.0" prefWidth="1172.0" stylesheets="@../../CSS/HomePage.CSS" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SaleHome.SaleHomePage">
+   <children>
+      <Label layoutX="29.0" layoutY="456.0" />
+      <TableView fx:id="productTable" layoutX="31.0" layoutY="82.0" prefHeight="567.0" prefWidth="1111.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="41.0" text="ID" />
+            <TableColumn fx:id="categoryCol" minWidth="16.0" prefWidth="99.0" text="Category" />
+          <TableColumn fx:id="nameCol" minWidth="16.0" prefWidth="180.0" text="Name" />
+            <TableColumn fx:id="cpuCol" minWidth="16.0" prefWidth="143.0" text="CPU" />
+            <TableColumn fx:id="ramCol" minWidth="16.0" prefWidth="85.0" text="RAM" />
+            <TableColumn fx:id="storageCol" minWidth="16.0" prefWidth="123.0" text="STORAGE" />
+            <TableColumn fx:id="displayCol" minWidth="16.0" prefWidth="144.0" text="DISPLAY" />
+            <TableColumn fx:id="priceCol" minWidth="16.0" prefWidth="124.0" text="PRICE" />
+            <TableColumn fx:id="userCol" prefWidth="96.0" text="BUYER" />
+            <TableColumn fx:id="quacol" prefWidth="113.0" text="QUANTITY" />
+        </columns>
+      </TableView>
+      <Label layoutX="164.0" layoutY="35.0" prefHeight="26.0" prefWidth="79.0" text="s'cart" textFill="#176b87">
+         <font>
+            <Font name="Verdana Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="namelabel" layoutX="31.0" layoutY="35.0" prefHeight="26.0" prefWidth="126.0" text="FULLNAME" textAlignment="CENTER" textFill="#176b87">
+         <font>
+            <Font name="Verdana Bold" size="21.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="496.0" layoutY="668.0" prefHeight="63.0" prefWidth="180.0" stylesheets="@../../CSS/HomePage.CSS">
+         <children>
+            <ImageView fx:id="iHome2" fitHeight="40.0" fitWidth="43.0" layoutX="26.0" layoutY="7.0" onMouseClicked="#Remove" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ico/remove.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="17.0" layoutY="41.0" prefHeight="25.0" prefWidth="58.0" text="Remove" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="iHome1" fitHeight="34.0" fitWidth="40.0" layoutX="112.0" layoutY="7.0" onMouseClicked="#purchase" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ico/paid.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="97.0" layoutY="41.0" prefHeight="25.0" prefWidth="65.0" text="Purchase" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+         <styleClass>
+            <String fx:value="anchorpane_menu" />
+            <String fx:value="anchorpane_menu_2" />
+         </styleClass>
+      </AnchorPane>
+   </children>
+</AnchorPane>

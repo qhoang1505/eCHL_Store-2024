@@ -1,0 +1,56 @@
+.anchorpane_login {
+    -fx-background-radius: 30px;
+    -fx-background-color: rgba(255, 255, 254, 0.6);
+}
+
+.text-field {
+    -fx-font-family: "#9Slide03 AmpleSoft", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-font-size: 16px;
+    -fx-text-fill: #27374D; /* Default text color */
+    -fx-background-color: transparent; /* Transparent background */
+    -fx-padding: 0 0 5 0; /* Adjust padding to leave space for the underline */
+    -fx-border-width: 0 0 1 0; /* Add a bottom border for the underline */
+    -fx-border-color:#27374D;  /* Underline color */
+    -fx-prompt-text-fill: #61677A; /*Color of prompt text*/ /*NGUYEN NGOC LAN CHU Y NGHE =)))*/
+}
+
+.text-field:hover {
+    -fx-border-color: #27374D; /* Hover effect for the underline */
+    -fx-text-fill: #27374D; /* Text color on hover */
+}
+
+.text-field:focused {
+    -fx-border-color: #27374D; /* Focus effect for the underline */
+    -fx-text-fill: #27374D; /* Text color on focus */
+}
+
+.text-field:disabled {
+    -fx-text-fill: #27374D; /* Text color when disabled */
+    -fx-background-color: transparent; /* Transparent background when disabled */
+    -fx-border-color: transparent;
+    /* Transparent border when disabled */
+}
+
+.button {
+    -fx-background-color: #27374D;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-text-fill: #DDE6ED;
+    -fx-font-size: 16px;
+}
+
+.create_account_label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #27374D ;
+}
+
+.text-input .text {
+    -fx-prompt-text-fill: red; /* Change color as needed */
+}
+
+.forgot_password_label {
+    -fx-font-size: 29;
+    -fx-color-label-visible: #27374D;
+    -fx-font: "#9Slide03 AmpleSoft" ;
+}
