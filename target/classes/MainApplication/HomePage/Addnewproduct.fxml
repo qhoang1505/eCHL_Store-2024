@@ -8,66 +8,63 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="577.0" prefWidth="800.0" stylesheets="@../../CSS/Login.CSS" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Dashboard.Addnewproduct">
+<AnchorPane prefHeight="654.0" prefWidth="855.0" stylesheets="@../../CSS/login_02.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Dashboard.Addnewproduct">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f5f5" height="654.0" stroke="TRANSPARENT" strokeType="INSIDE" width="828.0" />
-      <Label layoutX="43.0" layoutY="14.0" text="Add new Product" textFill="#27374d">
+      <Label layoutX="336.0" layoutY="26.0" text="Add new Product" textFill="#27374d">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#27374d" height="9.0" layoutY="56.0" stroke="TRANSPARENT" strokeType="INSIDE" width="828.0" />
       <VBox layoutX="24.0" layoutY="79.0" prefHeight="200.0" prefWidth="100.0" spacing="25.0">
          <children>
-            <Label prefHeight="26.0" prefWidth="62.0" text="ID:" textFill="#176b87">
+            <Label prefHeight="26.0" prefWidth="62.0" styleClass="label_username_bold" text="ID:" textFill="#176b87">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label prefHeight="26.0" prefWidth="74.0" text="Category:" textFill="#176b87">
+            <Label prefHeight="26.0" prefWidth="74.0" styleClass="label_username_bold" text="Category:" textFill="#176b87">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label prefHeight="26.0" prefWidth="62.0" text="Name:" textFill="#176b87">
+            <Label prefHeight="26.0" prefWidth="62.0" styleClass="label_username_bold" text="Name:" textFill="#176b87">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label prefHeight="26.0" prefWidth="62.0" text="CPU:" textAlignment="CENTER" textFill="#176b87">
+            <Label prefHeight="26.0" prefWidth="62.0" styleClass="label_username_bold" text="CPU:" textAlignment="CENTER" textFill="#176b87">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label prefHeight="26.0" prefWidth="62.0" text="RAM:" textFill="#176b87">
+            <Label prefHeight="26.0" prefWidth="62.0" styleClass="label_username_bold" text="RAM:" textFill="#176b87">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label prefHeight="26.0" prefWidth="74.0" text="Storage:" textFill="#176b87">
+            <Label prefHeight="26.0" prefWidth="74.0" styleClass="label_username_bold" text="Storage:" textFill="#176b87">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label prefHeight="26.0" prefWidth="82.0" text="Display:" textFill="#176b87">
+            <Label prefHeight="26.0" prefWidth="82.0" styleClass="label_username_bold" text="Display:" textFill="#176b87">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label prefHeight="26.0" prefWidth="82.0" text="Quantity:" textFill="#176b87">
+            <Label prefHeight="26.0" prefWidth="82.0" styleClass="label_username_bold" text="Quantity:" textFill="#176b87">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label prefHeight="26.0" prefWidth="82.0" text="Price:" textFill="#176b87">
+            <Label prefHeight="26.0" prefWidth="82.0" styleClass="label_username_bold" text="Price:" textFill="#176b87">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label prefHeight="48.0" prefWidth="82.0" text="Year:" textFill="#176b87">
+            <Label prefHeight="48.0" prefWidth="82.0" styleClass="label_username_bold" text="Year:" textFill="#176b87">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -97,6 +94,6 @@
             <Image url="@../../../../../../../../../../../../OneDrive_Personal/OneDrive/Hình%20ảnh/2905_hinh-nen-may-tinh-sieu-dang-yeu2.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="544.0" layoutY="359.0" mnemonicParsing="false" onAction="#add_images" prefHeight="33.0" prefWidth="233.0" text="Add new image " />
+      <Button layoutX="554.0" layoutY="300.0" mnemonicParsing="false" onAction="#add_images" prefHeight="33.0" prefWidth="233.0" text="Add new image " />
    </children>
 </AnchorPane>

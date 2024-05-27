@@ -1,104 +1,79 @@
 .anchopane {
-    -fx-background-color: rgba(255, 255, 255, 0.6);
+    -fx-background-color: white 0.2;
 }
 
-.anchopane_main {
-    -fx-background-color: rgba(255, 255, 255, 0.6);
-}
+.anchorpane_menu {
 
-.anchopane_main_2 {
-    -fx-background-color: rgba(255, 255, 255, 0);
-}
-.transparent-scroll-pane {
-    -fx-opacity: 0.5;
-}
-
-.shadow {
-    -fx-effect: dropShadow(three-pass-box, rgba(0, 0, 0, 0), 10, 0, 0, 10);
-}
-.dock_header {
-    -fx-background-color: #DFDFDE;
-    -fx-border-radius: 12px;
-    -fx-background-radius: 0 0 25 25;
-}
-
-.dock_footer {
-    -fx-background-color: #DFDFDE;
-    -fx-border-radius: 12px;
-    -fx-background-radius: 12px;
-}
-
-.anchorpane_search {
-    -fx-background-color: #f5f7f8;
-    -fx-background-radius: 25px;
-    -fx-border-radius: 25px;
 }
 
 .anchopane2 {
-    -fx-background-color: #DDE6ED ;
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
 }
 
-.anchorpane_main_chat {
-    -fx-background-color: #f5f7f8;
-    -fx-background-radius: 25px;
-    -fx-border-radius: 25px;
+.anchopane18{
+    -fx-background-color: rgba(255, 255, 255);
 }
+
+.anchopane16{
+    -fx-background-color: rgba(255, 255, 255);
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+}
+
+.anchopane17 {
+    -fx-background-color: #EEEEEE;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+}
+
+
+.anchopane3 {
+    -fx-background-color: #9DB2BF;
+}
+
+.anchopane4 {
+    -fx-background-color: #526D82 ;
+}
+.home_icons:hover{
+    -fx-background-color: #526D82;
+}
+
 
 .text-field_textmessenges {
     -fx-font-family: "#9Slide03 Cabin Bold";
     -fx-font-size: 16px;
     -fx-background-radius: 20;
     -fx-border-width: 1 1 1 1;
-    -fx-border-color:#f9f9f9 ;
+    -fx-border-color:  #EEEEEE;
     -fx-border-radius: 20;
-    -fx-background-color:#f9f9f9;
+    -fx-background-color: #EEEEEE 0.5 ;
 }
 
 .text-field_search {
     -fx-font-family: "#9Slide03 Cabin Bold";
     -fx-font-size: 16px;
-    -fx-background-radius: 20;
+    -fx-background-radius: 6.5;
     -fx-border-width: 1 1 1 1;
-    -fx-border-color:  #DFDFDE;
-    -fx-border-radius: 20;
-    -fx-background-color: #DFDFDE;
+    -fx-border-color: #f5f5f5;
+    -fx-border-radius: 6.5;
+    -fx-background-color:  #EEEEEE 0.5 ;
 }
 
-.anchopane_profile {
-    -fx-background-color: #27374D;
-    -fx-border-radius: 25px;
-    -fx-background-radius: 25px;
+.text-field_textmessenges .text-input:focused {
+    -fx-prompt-text-fill: #27374D; /* Màu của prompt text */
 }
 
-.imageview_avatar {
-    -fx-border-radius: 50%; /* Set the border radius to half of the width/height to make it circular */
-    -fx-background-radius: 50%; /* Set the background radius as well for a circular background */
-    -fx-border-width: 2px; /* Border width */
-    -fx-border-color: black; /* Border color */
-    -fx-background-color: white; /* Background color (if needed) */
+.text-field_search .text-input:focused {
+    -fx-prompt-text-fill: #27374D; /* Màu của prompt text */
 }
 
 .scroll_pane_chat {
-    -fx-background-color: #fffff ;
-    -fx-border-color: #fffff;
-}
-.button {
-    -fx-background-color: #27374D;
-    -fx-border-radius: 50px;
-    -fx-background-radius: 50px;
-    -fx-text-fill: #DDE6ED;
-    -fx-font-size: 16px;
+    -fx-background-color: #9DB2BF ;
+    -fx-border-color: #9DB2BF;
 }
 
-.button:hover {
-    -fx-background-color: transparent;
-    -fx-border-color: #27374D;
-    -fx-border-radius: 50px;
-    -fx-background-radius: 50px;
-    -fx-text-fill: #27374D;
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
-}
 
 /*Text*/
 .text1 {

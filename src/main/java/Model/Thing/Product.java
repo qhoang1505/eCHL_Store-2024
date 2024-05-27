@@ -13,17 +13,10 @@ public class Product implements IProduct {
     private String Seller;
     private int Price;
     private int ONumber;
-    private byte[] image;
 
-    public byte[] getImage() {
-        return image;
-    }
 
-    public void setImage(byte[] image) {
-        this.image = image;
-    }
 
-    public Product(String ID, String category, String name, String CPU, String ram, String storage, String display, int year, int quantity, int price, String seller, byte[] image) {
+    public Product(String ID, String category, String name, String CPU, String ram, String storage, String display, int year, int quantity, int price, String seller) {
         this.ID = ID;
         Category = category;
         this.name = name;
@@ -35,22 +28,8 @@ public class Product implements IProduct {
         Quantity = quantity;
         Seller = seller;
         Price = price;
-        this.image = image;
     }
 
-    public Product(String ID, String category, String name, String CPU, String ram, String storage, String display,  int year, int quantity, int price, String seller) {
-        this.ID = ID;
-        this.Category = category;
-        this.name = name;
-        this.CPU = CPU;
-        this.Ram = ram;
-        this.Storage = storage;
-        this.Display = display;
-        this.Year = year;
-        this.Quantity = quantity;
-        this.Price = price;
-        this.Seller = seller;
-    }
 
     public Product(String ID, String category, String name, String CPU, String ram, String storage, String display, int year, int quantity, int price, String seller, int onumber) {
         this.ID = ID;

@@ -26,12 +26,12 @@
             <TableColumn fx:id="quacol" prefWidth="113.0" text="QUANTITY" />
         </columns>
       </TableView>
-      <Label layoutX="164.0" layoutY="35.0" prefHeight="26.0" prefWidth="79.0" text="s'cart" textFill="#176b87">
+      <Label layoutX="118.0" layoutY="35.0" prefHeight="26.0" prefWidth="79.0" styleClass="label_username_bold" text="s'cart" textFill="#176b87">
          <font>
             <Font name="Verdana Bold" size="21.0" />
          </font>
       </Label>
-      <Label fx:id="namelabel" layoutX="31.0" layoutY="35.0" prefHeight="26.0" prefWidth="126.0" text="FULLNAME" textAlignment="CENTER" textFill="#176b87">
+      <Label fx:id="namelabel" layoutX="31.0" layoutY="35.0" prefHeight="26.0" prefWidth="126.0" styleClass="label_username_bold" text="fullname" textAlignment="CENTER" textFill="#176b87">
          <font>
             <Font name="Verdana Bold" size="21.0" />
          </font>

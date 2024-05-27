@@ -51,6 +51,31 @@
 
 .forgot_password_label {
     -fx-font-size: 29;
+    -fx-font-weight: bold;
     -fx-color-label-visible: #27374D;
     -fx-font: "#9Slide03 AmpleSoft" ;
+}
+
+.label_name {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #27374D;
+    -fx-text-alignment: center;
+}
+
+.my-image-view {
+    -fx-background-radius: 500px;
+    -fx-border-radius: 500px;
+}
+
+.label_username_bold{
+    -fx-font-size: 16px;
+    -fx-text-fill: #27374D;
+    -fx-font-weight: bold;
+}
+
+.label_username {
+    -fx-font-size: 16px;
+    -fx-text-fill: #27374D;
+    -fx-alignment: LEFT;
 }

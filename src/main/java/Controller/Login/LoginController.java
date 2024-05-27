@@ -18,11 +18,22 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.sql.*;
@@ -64,6 +75,10 @@ public class LoginController implements IConnect<Administrator> {
     @FXML
     private TextField email_textfield;
 
+    public void initialize() {
+        autoFillLoginFields();
+    }
+
 
     //DANG NHAP VA DANG KI
     public static AdministratorConnnect getInstance() {
@@ -87,7 +102,9 @@ public class LoginController implements IConnect<Administrator> {
         }
         if (loginSuccessful == 1) {
             Administrator ad = getUserInfo(username);
-            ObjectCurrent.setObjectCurrent(ad); // gan object ad vao nguoi dung hien tai
+            ObjectCurrent.setObjectCurrent(ad);
+            saveUserToXML(ad, password);
+            // gan object ad vao nguoi dung hien tai
             switchtohomepage();
 
             Stage stage = (Stage) usernameText.getScene().getWindow();
@@ -364,4 +381,81 @@ public class LoginController implements IConnect<Administrator> {
         stage.setScene(scene);
         stage.show();
     }
+
+
+
+
+    private void saveUserToXML(Administrator admin, String password) {
+        try {
+            // Tạo DocumentBuilderFactory và DocumentBuilder
+            DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
+            // Tạo một Document mới
+            Document document = documentBuilder.newDocument();
+
+            // Tạo phần tử gốc
+            Element root = document.createElement("Administrator");
+            document.appendChild(root);
+
+            // Thêm phần tử username
+            Element username = document.createElement("Username");
+            username.appendChild(document.createTextNode(admin.getUsername()));
+            root.appendChild(username);
+
+            // Thêm phần tử password và sử dụng mật khẩu chưa mã hóa
+            Element passwordElement = document.createElement("Password");
+            passwordElement.appendChild(document.createTextNode(password));
+            root.appendChild(passwordElement);
+
+            // Tạo TransformerFactory và Transformer
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            DOMSource domSource = new DOMSource(document);
+            StreamResult streamResult = new StreamResult(new File("user_info.xml"));
+
+            // Biến đổi và lưu tài liệu vào tệp XML
+            transformer.transform(domSource, streamResult);
+            System.out.println("User information saved to XML file.");
+
+        } catch (ParserConfigurationException | TransformerException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private Administrator loadUserFromXML() {
+        try {
+            File xmlFile = new File("user_info.xml");
+            if (!xmlFile.exists()) {
+                return null;
+            }
+
+            DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
+            Document document = documentBuilder.parse(xmlFile);
+
+            document.getDocumentElement().normalize();
+
+            Element root = document.getDocumentElement();
+
+            String username = root.getElementsByTagName("Username").item(0).getTextContent();
+            String password = root.getElementsByTagName("Password").item(0).getTextContent();
+
+            return new Administrator(username, password);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+
+    }
+
+    private void autoFillLoginFields() {
+        Administrator admin = loadUserFromXML();
+        if (admin != null) {
+            usernameText.setText(admin.getUsername());
+            passwordText.setText(admin.getPassword());// You might want to decode or decrypt the password if necessary
+        }
+    }
+
 }

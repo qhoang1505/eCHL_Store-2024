@@ -1,6 +1,7 @@
 package Controller.Chat;
 
 
+
 import Model.Person.Administrator;
 import Model.Person.ObjectCurrent;
 
@@ -16,23 +17,28 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
+import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Collections;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
+
 
 
 public class ChatController implements Initializable {
@@ -63,7 +69,7 @@ public class ChatController implements Initializable {
             username = admin.getUsername();
         }
         try {
-            Socket socket = new Socket("0.tcp.ap.ngrok.io", 18517); // thay doi server
+            Socket socket = new Socket("localhost", 2005); // thay doi server
             System.out.println("Connected to server.");
 
             outputStream = new ObjectOutputStream(socket.getOutputStream());
@@ -118,7 +124,7 @@ public class ChatController implements Initializable {
             e.printStackTrace();
         }
     }
-    public void sendButtonOnAction(ActionEvent event) {
+    public void sendButtonOnAction(MouseEvent event) {
         sendMsg(textfield_chat.getText());
     }
     public void sendMsg(String msgToSend) {

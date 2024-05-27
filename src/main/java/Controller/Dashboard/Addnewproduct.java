@@ -66,46 +66,10 @@ public class Addnewproduct {
 
     @FXML
     private TextField yeartext;
-    @FXML
-    private ImageView image_product;
+
 
     // Trung tam xu li su kien --------------------------------------------------------
-    File selectedFile;
-    public void add_images(ActionEvent event) throws IOException, SQLException {
-        Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Open Image Files");
-        // Adding filters for image files
-        fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif", "*.bmp", "*.jpeg")
-        );
-        selectedFile = fileChooser.showOpenDialog(primaryStage);
-        if (selectedFile != null) {
-            // Load the selected image into an ImageView
-            Image image = new Image(selectedFile.toURI().toString());
-            image_product.setImage(image);
-            // Database connection
-            Connection connection = DBController.getConnection();
-            PreparedStatement pst = null;
-            String sql = "INSERT INTO photo(photo) VALUES (?)";
 
-            try {
-                pst = connection.prepareStatement(sql);
-                // Convert image file to byte array (blob)
-                InputStream inputStream = new FileInputStream(selectedFile);
-                pst.setBlob(1, inputStream);
-                pst.executeUpdate();
-                System.out.println("Update!");
-            } catch (SQLException | FileNotFoundException e) {
-                throw new RuntimeException(e);
-            } finally {
-                if (pst != null) {
-                    pst.close();
-                }
-                connection.close();
-            }
-        }
-    }
     public void add_product(ActionEvent event) throws FileNotFoundException, SQLException {
         // Get string values from text fields
         String id = idtext.getText().trim();
@@ -126,12 +90,11 @@ public class Addnewproduct {
             alertFail.showAndWait();
         }
         else {
-            // Check if a file is selected
-            if (selectedFile != null) {
+            // Check if a file is selecte
                 // Database connection
                 Connection connection = DBController.getConnection();
                 PreparedStatement preparedStatement = null;
-                String sql = "INSERT INTO product(id, category, name, cpu, ram, storage, display, year, quantity, price, seller, photo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                String sql = "INSERT INTO product(id, category, name, cpu, ram, storage, display, year, quantity, price, seller) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
                 try {
                     preparedStatement = connection.prepareStatement(sql);
@@ -156,8 +119,6 @@ public class Addnewproduct {
                     preparedStatement.setString(11, username);
 
                     // Set the image as a blob parameter
-                    InputStream inputStream = new FileInputStream(selectedFile);
-                    preparedStatement.setBlob(12, inputStream);
 
 
                     preparedStatement.executeUpdate();
@@ -177,4 +138,3 @@ public class Addnewproduct {
             }
         }
     }
-}

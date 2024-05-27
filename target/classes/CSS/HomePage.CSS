@@ -147,3 +147,27 @@
     -fx-text-fill:#27374D ;
     -fx-font: 19px;
 }
+
+.label_name {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #27374D;
+    -fx-text-alignment: center;
+}
+
+.my-image-view {
+    -fx-background-radius: 500px;
+    -fx-border-radius: 500px;
+}
+
+.label_username_bold{
+    -fx-font-size: 19px;
+    -fx-text-fill: #27374D;
+    -fx-font-weight: bold;
+}
+
+.label_username {
+    -fx-font-size: 19px;
+    -fx-text-fill: #27374D;
+    -fx-alignment: LEFT;
+}
