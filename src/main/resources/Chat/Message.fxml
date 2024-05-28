@@ -49,19 +49,37 @@
                   </ImageView>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="752.0" layoutY="84.0" prefHeight="591.0" prefWidth="421.0" styleClass="anchopane2">
+        <AnchorPane layoutX="757.0" layoutY="81.0" prefHeight="591.0" prefWidth="421.0" styleClass="anchopane2">
             <children>
-                <Label fx:id="username_label" layoutX="19.0" layoutY="14.0" prefHeight="40.0" prefWidth="166.0" text="eHCL Store chat">
+                <Label fx:id="username_label" layoutX="20.0" layoutY="25.0" prefHeight="40.0" prefWidth="166.0" text="eHCL Store chat">
                     <font>
                         <Font name="Calibri" size="25.0" />
                     </font>
                 </Label>
-                <TextField fx:id="recipient" layoutX="15.0" layoutY="62.0" prefHeight="40.0" prefWidth="381.0" promptText="Find repentiecer" styleClass="text-field_textmessenges" />
-                <ImageView fitHeight="33.0" fitWidth="30.0" layoutX="358.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                <TextField fx:id="recipient" layoutX="20.0" layoutY="82.0" prefHeight="40.0" prefWidth="331.0" promptText="Find repentiecer" styleClass="text-field_textmessenges" />
+                <ImageView fitHeight="33.0" fitWidth="30.0" layoutX="359.0" layoutY="87.0" onMouseClicked="#search" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@search_icons.png" />
                     </image>
                 </ImageView>
+            <AnchorPane layoutX="20.0" layoutY="148.0" prefHeight="226.0" prefWidth="381.0" styleClass="anchopane16">
+               <children>
+                  <Label layoutX="146.0" layoutY="14.0" styleClass="label_username_bold" text="Client found" />
+                  <ImageView fx:id="profile_image" fitHeight="131.0" fitWidth="134.0" layoutX="21.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../../../../Document/rounded-in-photoretrica.png" />
+                     </image>
+                  </ImageView>
+                  <VBox layoutX="171.0" layoutY="71.0" prefHeight="103.0" prefWidth="208.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="fullnametext" prefHeight="21.0" prefWidth="217.0" styleClass="label_username" text="Fullname" />
+                        <Label fx:id="emailtext" prefHeight="21.0" prefWidth="224.0" styleClass="label_username" text="Email" />
+                        <Label fx:id="hotlinetext" prefHeight="21.0" prefWidth="220.0" styleClass="label_username" text="Hotline" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Label fx:id="error_show" layoutX="86.0" layoutY="466.0" styleClass="label_username_bold2" />
             </children>
         </AnchorPane>
     </children>

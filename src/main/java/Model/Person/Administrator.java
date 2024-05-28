@@ -9,6 +9,14 @@ public class Administrator implements IPerson{
     private byte[] image_data;
     private String hotline;
 
+    public Administrator(String username, String password, String email, String fullname, String hotline) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.fullname = fullname;
+        this.hotline = hotline;
+    }
+
     public Administrator(String username, String password, String email, String fullname) {
         this.username = username;
         this.password = password;

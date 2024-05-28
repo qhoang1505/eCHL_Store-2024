@@ -19,7 +19,7 @@ public class SmartShop extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(SmartShop.class.getResource("/LoginScreen/Login.fxml"));
 
-        Scene scenelogin = new Scene(fxmlLoader.load(), 1124, 638);
+        Scene scenelogin = new Scene(fxmlLoader.load(), 1117, 638);
         stage.setTitle("eCHL Store");
         stage.setScene(scenelogin);
         stage.show();

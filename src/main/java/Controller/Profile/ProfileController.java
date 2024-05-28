@@ -86,6 +86,7 @@ public class ProfileController implements Initializable {
         } else {
             usernametext.setText("N/A");
         }
+        refreshprofile();
     }
 
     public void editprofile(MouseEvent event) throws IOException {
@@ -116,12 +117,13 @@ public class ProfileController implements Initializable {
                 if (currentUser instanceof Administrator) {
                     Administrator admin = (Administrator) currentUser;
                     String username = admin.getUsername();
-                    if(username.equals(rs.getString(1))) {
-                        admindata.add(new Administrator(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getBytes(6), rs.getString(7)));
+                    if(username.equals(rs.getString(2))) {
+                        admindata.add(new Administrator(rs.getString(2), rs.getString(4), rs.getString(3), rs.getString(1), rs.getString(5), rs.getBytes(6), rs.getString(7)));
                         // Hiển thị username trong label
-                        usernametext.setText(rs.getString(1));
+                        usernametext.setText(rs.getString(2));
+                        hotlinetext.setText(rs.getString(5));
                         // Có thể thêm mã để hiển thị các thông tin khác nếu cần
-                        fullnametext.setText(rs.getString(4));
+                        fullnametext.setText(rs.getString(1));
                         emailtext.setText(rs.getString(3));
                         byte[] imageData = rs.getBytes(6);
                         Image image = new Image(new ByteArrayInputStream(imageData));
@@ -169,6 +171,7 @@ public class ProfileController implements Initializable {
                 pst.setString(2, username);
                 pst.executeUpdate();
                 System.out.println("Update successful!");
+                refreshprofile();
             } catch (SQLException | FileNotFoundException e) {
                 throw new RuntimeException(e);
             } finally {

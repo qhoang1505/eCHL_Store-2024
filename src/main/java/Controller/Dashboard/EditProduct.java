@@ -145,6 +145,5 @@ public class EditProduct {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 }

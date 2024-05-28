@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="330.0" prefWidth="537.0" styleClass="anchorpane_login" stylesheets="@../../../CSS/login_02.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Profile.Editprofile">
+<AnchorPane prefHeight="377.0" prefWidth="537.0" styleClass="anchorpane_login" stylesheets="@../../../CSS/login_02.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Profile.Editprofile">
    <children>
       <Label layoutX="206.0" layoutY="31.0" styleClass="label_name" text="Edit profile" textFill="#176b87">
          <font>
@@ -27,6 +27,11 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
+            <Label prefHeight="26.0" prefWidth="62.0" styleClass="label_username_bold" text="Hotline" textAlignment="CENTER" textFill="#176b87">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
             <Label prefHeight="25.0" prefWidth="112.0" styleClass="label_username_bold" text="Password" textFill="#176b87">
                <font>
                   <Font name="System Bold" size="16.0" />
@@ -40,10 +45,11 @@
       <VBox layoutX="178.0" layoutY="94.0" prefHeight="115.0" prefWidth="295.0" spacing="19.0">
          <children>
             <TextField fx:id="nametext" prefHeight="25.0" prefWidth="319.0" promptText="Fullname" />
-            <TextField fx:id="Emailtext" prefHeight="25.0" prefWidth="345.0" promptText="Email" />
+            <TextField fx:id="emailtext" prefHeight="25.0" prefWidth="345.0" promptText="Email" />
+            <TextField fx:id="hotlinetext" prefHeight="25.0" prefWidth="345.0" promptText="hotline" />
             <TextField fx:id="passwordtext" prefHeight="25.0" prefWidth="345.0" promptText="Password" />
          </children>
       </VBox>
-      <Button fx:id="save" layoutX="315.0" layoutY="255.0" mnemonicParsing="false" onAction="#editprofileAction" prefHeight="35.0" prefWidth="126.0" text="Save" />
+      <Button fx:id="save" layoutX="317.0" layoutY="310.0" mnemonicParsing="false" onAction="#editprofileAction" prefHeight="35.0" prefWidth="126.0" text="Save" />
    </children>
 </AnchorPane>

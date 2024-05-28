@@ -2,7 +2,9 @@ package Controller.Chat;
 
 
 
+import Controller.Database.test.DBController;
 import Model.Person.Administrator;
+import Model.Person.Client_Chat;
 import Model.Person.ObjectCurrent;
 
 import javafx.application.Platform;
@@ -17,6 +19,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -54,11 +57,23 @@ public class ChatController implements Initializable {
 
     @FXML
     private VBox vBox;
+    @FXML
+    private ImageView profile_image;
 
     @FXML
     private Label username_chat;
     @FXML
     private ScrollPane scrollPane;
+
+    @FXML
+    private Label emailtext;
+
+    @FXML
+    private Label fullnametext;
+
+    @FXML
+    private Label hotlinetext;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //Ham de get username hien tai - nguoi dung dang nhap
@@ -167,6 +182,39 @@ public class ChatController implements Initializable {
             }
 
             textfield_chat.clear();
+        }
+    }
+    @FXML
+    private Label error_show;
+    public void search(MouseEvent event) throws SQLException {
+        String sql = "SELECT * FROM administrator WHERE username = ?";
+        String recipient_send = recipient.getText();
+
+        try (Connection con = DBController.getConnection();
+             PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+
+            // Set the username parameter
+            preparedStatement.setString(1, recipient_send);
+
+            // Execute the query and obtain the result set
+            try (ResultSet rs = preparedStatement.executeQuery()) {
+                // Check if a record was found
+                if (rs.next()) {
+                    Client_Chat cc = new Client_Chat(rs.getString(2), rs.getString(3), rs.getString(1), rs.getBytes(6), rs.getString(5));
+                    emailtext.setText(rs.getString(3));
+                    fullnametext.setText(rs.getString(2));
+                    hotlinetext.setText(rs.getString(5));
+                    byte[] imageData = rs.getBytes(6);
+                    Image image = new Image(new ByteArrayInputStream(imageData));
+                    profile_image.setImage(image);
+                    profile_image.setImage(image);
+                } else {
+                    error_show.setText("Username not found please try again!");
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e;
         }
     }
 }
