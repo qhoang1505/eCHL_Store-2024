@@ -14,7 +14,7 @@ public class DBController {
             // Đăng ký MySQL driver
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            String url = "jdbc:mysql://116.105.218.243/echl_store"; // Sửa cổng từ 3306 thành 1511
+            String url = "jdbc:mysql://116.110.215.57/echl_store"; // Sửa cổng từ 3306 thành 1511
             String username = "echl_store_database";
             String password = "echl_store_database@2024";
 

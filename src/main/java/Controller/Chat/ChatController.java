@@ -84,7 +84,7 @@ public class ChatController implements Initializable {
             username = admin.getUsername();
         }
         try {
-            Socket socket = new Socket("localhost", 2005); // thay doi server
+            Socket socket = new Socket("0.tcp.ap.ngrok.io", 19193); // thay doi server
             System.out.println("Connected to server.");
 
             outputStream = new ObjectOutputStream(socket.getOutputStream());
